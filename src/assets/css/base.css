@@ -1,0 +1,135 @@
+@import './normalize.css';
+/* 实现手机端1px问题 */
+@import './border.css';
+/* 引入iconfont字体图标 */
+@import './iconfont.css';
+
+/* :root -> 获取根元素html */
+
+:root {
+  --color-text:#333;
+  --color-text-p:#666;
+  --color-text-s:#999;
+  --color-hign-text:#ffbd26;
+  --color-tink:#46cdcf;
+  --color-border:#e5e5e5;
+  --color-bg-gay:#f5f6fa;
+  --color-background:#fff;
+  --font-size:14px;
+  --line-height:1.5;
+}
+* { touch-action: pan-y; }
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 16px;
+
+}
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }   /*去掉input等聚焦时的蓝色边框*/
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; }
+select, input { vertical-align:middle;}
+select, input, textarea { font-size:14px; margin:0; }
+textarea { resize:none; } /*防止拖动*/
+img {border:0; vertical-align:middle; }  /*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+table { border-collapse:collapse; }
+body {
+  font-family: "苹方","Helvetica Neue",Helvetica, "PingFang SC","Hiragino SnsGB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  user-select: none;/*禁止用户鼠标在页面上选中文字/图片等*/
+  -webkit-tap-highlight-color: transparent;/*webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节等*/
+  background: var(--color-background);
+  color: var(--color-text);
+  /*rem vw/vh*/
+  width: 100vm;
+}
+
+/*清楚浮动*/
+.clearfix:before,.clearfix:after {  
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+a {  color: var(--color-text); text-decoration:none; }
+a:hover{color:var(--color-tink);}
+h1,h2,h3,h4,h5,h6 {text-decoration:none;font-weight:normal;font-size:100%;}  /*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s,i,em{font-style:normal;text-decoration:none;}
+.col-red{color: #C81623!important;}
+
+/*公共类*/
+.w {  /*版心 提取 */
+    width: 1210px;margin:0 auto;
+}
+.fl {
+    float:left
+}
+.fr {
+    float:right
+}
+.al {
+    text-align:left
+}
+.ac {
+    text-align:center
+}
+.ar {
+    text-align:right
+}
+.hide {
+    display:none
+}
+.font12{ font-size: 12px;}
+.font14{ font-size: 14px;}
+.font16{ font-size: 16px;}
+
+/*公共部分*/
+.tagTyle{
+    font-size: 0.69rem;
+    padding: 0.13rem 0.38rem;
+    color: #fff;
+    background-color: var(--color-tink);
+    border-radius: 0.25rem;
+    margin-right: 0.31rem;
+}
+
+/* 价钱样式 */
+.price {
+    float: right;
+    color: var(--color-hign-text);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .price::before {
+    content: "￥";
+    font-size: 0.75rem;
+  }
+
+  /* 溢出显示省略号 */
+  .ellips {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .shadow{
+    box-shadow: 0 0.06rem 0.25rem rgba(0, 0, 0, 0.08);
+  }
+  .circle {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+/*头部导航开始*/
+.activeColS {
+  color: var(--color-tink);
+}
+
+/*尾部部导航开始*/
