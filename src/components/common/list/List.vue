@@ -1,26 +1,33 @@
 <template>
   <div class="productInfo">
-    <router-link
-      tag="div"
-      class="list"
-      v-for="item in prolist"
-      :key="item.id"
-      :to="'/prolist/' + item.id"
+    <van-list
+      v-model="loading"
+      :finished="finished"
+      finished-text="没有更多了"
+      @load="onLoad"
     >
-      <!-- 主题图片 -->
-      <i class="iconfont like">&#xe61a;</i>
-      <div class="list-img">
-        <i class="img-label">{{ item.tag }}</i>
-        <img :src="item.imgUrl" alt="" />
-      </div>
-      <!-- 文字信息 -->
-      <div class="list-item">
-        <h4>{{ item.title }}</h4>
-        <p>{{ item.desc }}</p>
-        <span class="tagTyle">查看详情</span>
-        <div class="price">{{ item.price }}</div>
-      </div>
-    </router-link>
+      <router-link
+        tag="div"
+        class="list"
+        v-for="item in prolist"
+        :key="item.id"
+        :to="'/prolist/' + item.id"
+      >
+        <!-- 主题图片 -->
+        <i class="iconfont like">&#xe61a;</i>
+        <div class="list-img">
+          <i class="img-label">{{ item.tag }}</i>
+          <img :src="item.imgUrl" alt="" />
+        </div>
+        <!-- 文字信息 -->
+        <div class="list-item">
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.desc }}</p>
+          <span class="tagTyle">查看详情</span>
+          <div class="price">{{ item.price }}</div>
+        </div>
+      </router-link>
+    </van-list>
   </div>
 </template>
 
@@ -29,6 +36,31 @@ export default {
   name: "List",
   props: {
     prolist: Array,
+  },
+  data() {
+    return {
+      loading: false,
+      finished: false,
+    };
+  },
+  methods: {
+    onLoad() {
+      // 异步更新数据
+      // setTimeout 仅做示例，真实场景中一般为 ajax 请求
+      setTimeout(() => {
+        // for (let i = 0; i < 5; i++) {
+        //   this.prolist.push(this.prolist.length + 1);
+        // }
+
+        // 加载状态结束
+        this.loading = false;
+
+        // 数据全部加载完成
+        if (this.prolist.length >= 10) {
+          this.finished = true;
+        }
+      }, 1000);
+    },
   },
 };
 </script>

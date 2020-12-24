@@ -64,8 +64,8 @@ export default {
   padding: 0 15px;
 }
 .tab-c-t {
-  height: 2.38rem;
-  line-height: 2.38rem;
+  height: 3rem;
+  line-height: 3rem;
 }
 .tab-c-t:before {
   content: "";
@@ -85,7 +85,7 @@ export default {
 /* --------------------------- */
 .attlist {
   width: 600px;
-  height: 180px;
+  height: 160px;
 }
 
 .liitem {
@@ -94,7 +94,7 @@ export default {
   height: 160px;
   background-color: #fff;
   border: 1px solid var(--color-border);
-  margin: 10px 10px 10px 0;
+  margin-right: 10px;
   text-align: center;
 }
 .liitem i {
@@ -107,7 +107,7 @@ export default {
   width: 48px;
   height: 48px;
   border-radius: 24px;
-  margin-top: 20px;
+  margin-top: 14px;
   margin-bottom: 10px;
 }
 .liitem p {
@@ -120,10 +120,10 @@ export default {
 .liitem .attbtn {
   display: inline-block;
   text-align: center;
-  width: 45px;
-  height: 18px;
+  width: 56px;
+  height: 24px;
   font-size: 0.69rem;
-  line-height: 18px;
+  line-height: 24px;
   border-radius: 0.25rem;
   background-color: var(--color-bg-gay);
   margin-top: 6px;
@@ -138,7 +138,7 @@ export default {
   width: 100%;
   background-color: #fff;
   border: 1px solid var(--color-border);
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 .recomlis i {
   position: absolute;
@@ -155,10 +155,10 @@ export default {
 .recomlis .attbtn {
   display: inline-block;
   text-align: center;
-  width: 45px;
-  height: 18px;
+  width: 56px;
+  height: 24px;
   font-size: 0.69rem;
-  line-height: 18px;
+  line-height: 24px;
   border-radius: 0.25rem;
   background-color: var(--color-bg-gay);
   margin-top: 20px;

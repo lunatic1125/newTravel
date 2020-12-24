@@ -27,8 +27,8 @@ export default {
   padding: 0 0.94rem;
 }
 .tab-c-t {
-  height: 2.38rem;
-  line-height: 2.38rem;
+  height: 3rem;
+  line-height: 3rem;
 }
 .tab-c-t:before {
   content: "";

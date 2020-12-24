@@ -6,8 +6,9 @@
           <router-link to="/" tag="span" class="circle">&#xe622;</router-link>
         </template>
         <template v-slot:center></template>
+
         <template v-slot:right>
-          <router-link to="/" tag="span" class="circle">&#xe618;</router-link>
+          <span class="circle" @click="showShare = true">&#xe618;</span>
         </template>
       </navbar-item>
     </navbar>
@@ -27,6 +28,11 @@
       </navbar-item>
     </navbar>
     <img :src="proname.imgUrl" />
+    <van-share-sheet
+      v-model="showShare"
+      title="立即分享给好友"
+      :options="options"
+    />
   </div>
 </template>
 <script>
@@ -45,6 +51,21 @@ export default {
       handelShowStyle: {
         opacity: 0,
       },
+      //-------------
+      showShare: false,
+      options: [
+        [
+          { name: "微信", icon: "wechat" },
+          { name: "微博", icon: "weibo" },
+          { name: "QQ", icon: "qq" },
+        ],
+        [
+          { name: "复制链接", icon: "link" },
+          { name: "分享海报", icon: "poster" },
+          { name: "二维码", icon: "qrcode" },
+          { name: "小程序码", icon: "weapp-qrcode" },
+        ],
+      ], //---------------
     };
   },
   methods: {

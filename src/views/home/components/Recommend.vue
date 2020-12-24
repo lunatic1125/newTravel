@@ -2,9 +2,8 @@
   <div class="recommend">
     <div class="recommend-title">
       <span>推荐</span>
-      <!-- <span>附近</span> -->
     </div>
-    <list :prolist="hotList"></list>
+    <list :prolist="recomlist"></list>
   </div>
 </template>
 
@@ -17,7 +16,6 @@ export default {
   },
   props: {
     recomlist: Array,
-    hotList: Array,
   },
 };
 </script>
@@ -28,8 +26,8 @@ export default {
   padding: 0 0.94rem;
 }
 .recommend-title {
-  height: 2.38rem;
-  line-height: 2.38rem;
+  height: 3rem;
+  line-height: 3rem;
 }
 .recommend-title:before {
   content: "";

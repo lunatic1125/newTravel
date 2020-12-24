@@ -56,10 +56,10 @@ export default {
   top: 35px;
   right: 0;
   text-align: center;
-  width: 45px;
-  height: 18px;
+  width: 56px;
+  height: 24px;
   font-size: 0.69rem;
-  line-height: 18px;
+  line-height: 24px;
   border-radius: 0.25rem;
   background-color: var(--color-bg-gay);
 }
