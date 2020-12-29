@@ -30,7 +30,7 @@ export default {
 .prftitle {
   text-align: center;
   background-color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .prf-ul {
   padding-top: 5px;
@@ -39,8 +39,8 @@ export default {
   margin-bottom: 5px;
 }
 .prf-img img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 }
 .prf-h {
   font-size: 16px;

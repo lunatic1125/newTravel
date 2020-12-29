@@ -19,13 +19,13 @@ export default {
       value1: 0,
       value2: "a",
       option1: [
-        { text: "全部商品", value: 0 },
-        { text: "新款商品", value: 1 },
-        { text: "活动商品", value: 2 },
+        { text: "全部产品", value: 0 },
+        { text: "热销产品", value: 1 },
+        // { text: "活动商品", value: 2 },
       ],
       option2: [
         { text: "默认排序", value: "a" },
-        { text: "好评排序", value: "b" },
+        { text: "价格排序", value: "b" },
         { text: "销量排序", value: "c" },
       ],
     };
@@ -34,7 +34,23 @@ export default {
 </script>
 
 <style scoped>
-.trip-recommend >>> .van-tabs__line {
+.trip-recommend >>> .van-dropdown-menu__title--active {
+  color: var(--color-tink) !important;
+}
+.trip-recommend >>> .van-dropdown-item__option--active {
+  color: var(--color-tink) !important;
+}
+.trip-recommend
+  >>> .van-dropdown-item__option--active
+  .van-dropdown-item__icon {
+  color: var(--color-tink) !important;
+}
+.trip-recommend {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* .trip-recommend >>> .van-tabs__line {
   background-color: var(--color-tink) !important;
 }
 .trip-recommend {
@@ -56,5 +72,5 @@ export default {
   font-size: 0.94rem;
   padding: 0.5rem;
   margin-right: 1.13rem;
-}
+} */
 </style>

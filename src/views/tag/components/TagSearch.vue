@@ -76,7 +76,6 @@ export default {
   background-color: #fff;
 }
 .tag-city {
-  position: relative;
   overflow: hidden;
   /* 搜索框60px */
   height: 1.88rem;
@@ -85,13 +84,10 @@ export default {
   z-index: 6;
 }
 .tag-city input {
-  position: absolute;
-  top: 2px;
-  left: 8px;
   width: 100%;
   padding: 0 0.63rem;
   color: #666;
-  height: 1.63rem;
+  height: 1.88rem;
   text-align: center;
   background-color: transparent;
 }

@@ -1,6 +1,10 @@
 <template>
   <div class="proicons">
     <div class="icon-item">
+      <span class="iconfont">&#xe61c;</span>
+      <p>主页</p>
+    </div>
+    <div class="icon-item">
       <span class="iconfont">&#xe61b;</span>
       <p>订单</p>
     </div>
@@ -25,15 +29,19 @@ export default {
 .proicons {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .icon-item {
-  margin: 15px;
+  flex: 30%;
+  margin: 10px;
   font-size: 15px;
   text-align: center;
 }
+
 .iconfont {
-  font-size: 34px;
+  font-size: 28px;
 }
 </style>

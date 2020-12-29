@@ -13,6 +13,8 @@ export default {
 <style scoped>
 .trip-banner {
   width: 100%;
+  height: 12.5rem;
+  background-color: #eee;
 }
 .trip-banner img {
   width: 100%;

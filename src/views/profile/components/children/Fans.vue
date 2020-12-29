@@ -24,9 +24,6 @@ export default {
 </script>
 
 <style scoped>
-.fans {
-  padding: 0 15px;
-}
 .fans-lis {
   position: relative;
   padding: 15px 0;

@@ -28,9 +28,6 @@ export default {
 </script>
 
 <style scoped>
-.write {
-  padding: 0 15px;
-}
 .tab-c-t {
   height: 3rem;
   line-height: 3rem;
