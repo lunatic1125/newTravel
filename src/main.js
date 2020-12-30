@@ -10,7 +10,6 @@ fastClick.attach(document.body)
 import Vant from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Vant)
-Vue.prototype.$
 
 //swiper插件使用 
 import VueAwesomeSwiper from 'vue-awesome-swiper'

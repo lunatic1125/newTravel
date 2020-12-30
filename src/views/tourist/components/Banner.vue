@@ -67,7 +67,7 @@ export default {
 }
 .tourist-banner {
   width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   padding: 0 0.94rem;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
 }

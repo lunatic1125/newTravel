@@ -1,5 +1,45 @@
 <template>
   <div class="pinlist">
+    <!-- 侧边栏 -->
+    <div class="sidebar" @click="showSide">
+      <span class="iconfont">&#xe626;</span>目录
+    </div>
+    <div class="sidebar-cont" v-show="isShowSide" @click="colseSide">
+      <div class="cont">
+        <h4 class="stitle">游记目录</h4>
+        <ul>
+          <li><span class="styleB">01/</span>写在前边</li>
+          <li><span class="styleB">02/</span>写在前边</li>
+          <li><span class="styleB">03/</span>写在前边</li>
+          <li><span class="styleB">04/</span>写在前边</li>
+          <li><span class="styleB">05/</span>写在前边</li>
+          <li><span class="styleB">06/</span>写在前边</li>
+          <li><span class="styleB">07/</span>写在前边</li>
+          <li><span class="styleB">08/</span>写在前边</li>
+          <li><span class="styleB">09/</span>写在前边</li>
+          <li><span class="styleB">10/</span>写在前边</li>
+          <li><span class="styleB">11/</span>写在前边</li>
+          <li><span class="styleB">12/</span>写在前边</li>
+          <li><span class="styleB">12/</span>写在前边</li>
+          <li><span class="styleB">12/</span>写在前边</li>
+          <li><span class="styleB">12/</span>写在前边</li>
+          <li><span class="styleB">12/</span>写在前边</li>
+        </ul>
+      </div>
+    </div>
+    <!-- tabbar -->
+    <div class="tabbar">
+      <div @click="showReview">
+        <i>366</i>
+        <span class="iconfont">&#xe619;</span>
+      </div>
+      <div @click="showLike">
+        <i>110</i>
+        <span class="iconfont" v-show="!isshowLike">&#xe61a;</span>
+        <span class="iconfont activeColS" v-show="isshowLike">&#xe629;</span>
+      </div>
+    </div>
+    <pin-review v-show="isShowRev" @closeRev="closeRev" />
     <!-- nav -->
     <div class="tournav">
       <router-link tag="div" to="/tourist" class="item-left iconfont">
@@ -87,11 +127,17 @@
 
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+import PinReview from "./PinReview.vue";
+import { Toast } from "vant";
 
 export default {
+  components: { PinReview },
   name: "PinList",
   data() {
     return {
+      isShowSide: false,
+      isShowRev: false,
+      isshowLike: false,
       swiperOption: {
         slidesPerView: 2,
         pagination: {
@@ -101,10 +147,125 @@ export default {
       },
     };
   },
+  methods: {
+    showSide() {
+      this.isShowSide = true;
+    },
+    colseSide() {
+      this.isShowSide = false;
+    },
+    showReview() {
+      this.isShowRev = true;
+    },
+    closeRev() {
+      this.isShowRev = false;
+    },
+    showLike() {
+      this.isshowLike = !this.isshowLike;
+      if (this.isshowLike) {
+        Toast("收藏成功");
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
+/* tabbar */
+.tabbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3.06rem;
+  text-align: center;
+  background-color: #fff;
+}
+.tabbar div {
+  flex: 1;
+  position: relative;
+}
+.tabbar div i {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  font-size: 12px;
+}
+.tabbar .iconfont {
+  font-size: 1.38rem;
+}
+/* 评论 */
+.review {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+/* 侧边栏 */
+.sidebar {
+  position: fixed;
+  bottom: 80px;
+  left: 0;
+  width: 86px;
+  height: 50px;
+  padding-left: 10px;
+  line-height: 50px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #fff;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+}
+.sidebar .iconfont {
+  font-size: 1.25rem;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+.sidebar-cont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.cont {
+  width: 308px;
+  background-color: #fff;
+}
+.cont ul li {
+  line-height: 55px;
+  padding-left: 20px;
+}
+.stitle {
+  height: 44px;
+  line-height: 44px;
+  padding-left: 55px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-border);
+}
+.stitle::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin-top: -3px;
+  margin-left: 9px;
+  background-color: var(--color-tink);
+}
+.styleB {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-s);
+}
+/* --------------end-------------- */
 .swiper-container {
   margin: 0 !important;
 }

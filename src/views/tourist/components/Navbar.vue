@@ -27,6 +27,7 @@ export default {
   height: 2.75rem;
   padding: 0 0.31rem;
   background-color: #fff;
+  z-index: 2;
 }
 .item-center {
   padding-right: 15px;

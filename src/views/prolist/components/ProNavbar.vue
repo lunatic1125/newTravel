@@ -3,12 +3,12 @@
     <navbar class="pro-t" v-show="upShow">
       <navbar-item>
         <template v-slot:left>
-          <router-link to="/" tag="span" class="circle">&#xe622;</router-link>
+          <router-link to="/" tag="span">&#xe622;</router-link>
         </template>
         <template v-slot:center></template>
 
         <template v-slot:right>
-          <span class="circle" @click="showShare = true">&#xe618;</span>
+          <span @click="showShare = true">&#xe618;</span>
         </template>
       </navbar-item>
     </navbar>

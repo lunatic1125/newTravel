@@ -34,7 +34,7 @@ export default {
 .pin-t {
   font-size: 1.13rem;
   line-height: 1.75rem;
-  margin-bottom: 2.13rem;
+  margin-bottom: 1.6rem;
 }
 .pinlist {
   float: left;

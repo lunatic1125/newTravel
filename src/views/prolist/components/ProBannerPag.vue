@@ -83,10 +83,6 @@ export default {
 .prodate {
   font-size: 14px;
 }
-.iconfont {
-  font-size: 22px;
-  vertical-align: top;
-}
 /* --------------- */
 .proimg {
   width: 600px;

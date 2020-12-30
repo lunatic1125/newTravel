@@ -81,7 +81,6 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 1.13rem;
   padding: 0.25rem;
 }
 /* list-img */

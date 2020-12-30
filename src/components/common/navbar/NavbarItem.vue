@@ -27,7 +27,7 @@ export default {
 .item-right {
   width: 2.75rem;
   /* icon大小44px */
-  font-size: 1.38rem;
+  font-size: 1.25rem;
   line-height: 2.75rem;
 }
 .item-right {

@@ -125,10 +125,6 @@ s,i,em{font-style:normal;text-decoration:none;}
   .shadow{
     box-shadow: 0 0.06rem 0.25rem rgba(0, 0, 0, 0.08);
   }
-  .circle {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-  }
 /*头部导航开始*/
 .activeColS {
   color: var(--color-tink);
